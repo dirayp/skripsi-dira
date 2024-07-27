@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^aksi/hapus-admin/([0-9a-zA-Z]+) aksi/hapus-admin.php?id_admin=$1 [NC,L]
+RewriteRule ^aksi/hapus-trxmasuk/([0-9a-zA-Z]+) aksi/hapus-trxmasuk.php?id_trxmasuk=$1 [NC,L]
+RewriteRule ^aksi/hapus-masterbarang/([0-9a-zA-Z]+) aksi/hapus-masterbarang.php?id_namabarang=$1 [NC,L]
+RewriteRule ^aksi/hapus-mastersupplier/([0-9a-zA-Z]+) aksi/hapus-mastersupplier.php?id_namasupplier=$1 [NC,L]
+RewriteRule ^aksi/hapus-trxkeluar/([0-9a-zA-Z]+) aksi/hapus-trxkeluar.php?id_trxkeluar=$1 [NC,L]
+
+RewriteRule ^aksi/update-admin/([0-9a-zA-Z]+) aksi/update-admin.php?id_admin=$1 [NC,L]
+RewriteRule ^aksi/update-masterbarang/([0-9a-zA-Z]+) aksi/update-masterbarang.php?id_namabarang=$1 [NC,L]
+RewriteRule ^aksi/update-mastersupplier/([0-9a-zA-Z]+) aksi/update-mastersupplier.php?id_namasupplier=$1 [NC,L]
+RewriteRule ^aksi/update-trxmasuk/([0-9a-zA-Z]+) aksi/update-trxmasuk.php?id_trxmasuk=$1 [NC,L]
+RewriteRule ^aksi/update-trxkeluar/([0-9a-zA-Z]+) aksi/update-trxkeluar.php?id_trxkeluar=$1 [NC,L]
+
+RewriteRule ^inc/edit-admin/([0-9a-zA-Z]+) inc/edit-admin.php?id_admin=$1 [NC,L]
+RewriteRule ^inc/edit-masterbarang/([0-9a-zA-Z]+) inc/edit-masterbarang.php?id_namabarang=$1 [NC,L]
+RewriteRule ^inc/edit-mastersupplier/([0-9a-zA-Z]+) inc/edit-mastersupplier.php?id_namasupplier=$1 [NC,L]
+RewriteRule ^inc/edit-trxmasuk/([0-9a-zA-Z]+) inc/edit-trxmasuk.php?id_trxmasuk=$1 [NC,L]
+RewriteRule ^inc/edit-trxkeluar/([0-9a-zA-Z]+) inc/edit-trxkeluar.php?id_trxkeluar=$1 [NC,L]
+
+RewriteRule ^save-trxkeluar/([0-9a-zA-Z]+) save-trxkeluar.php?id_trxkeluar=$1 [NC,L]
+RewriteRule ^save-trxmasuk/([0-9a-zA-Z]+) save-trxmasuk.php?id_trxmasuk=$1 [NC,L]
+RewriteRule ^aksi/upload/([0-9a-zA-Z]+) aksi/upload.php?id=$1 [NC,L]
+</IfModule>
